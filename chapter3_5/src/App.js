@@ -1,19 +1,12 @@
-import React, { Component } from 'react';
-import { createStore } from 'redux';
-import appReducer from './reducers';
-import { createPost } from './actions';
+import React from 'react';
 import { ConnectedPostList } from './containers/ConnectedPostList';
+import { ConnectedFilterList } from './containers/ConnectedFilterList';
 
-let store = createStore(appReducer);
+const App = () =>
+  <div>
+    <h1>React/Redux Blog App</h1>
+    <div><ConnectedFilterList /></div>
+    <div><ConnectedPostList /></div>
+  </div>
 
-store.dispatch(createPost('des', 'try it for free'));
-
-setTimeout(() => {
-  store.dispatch(createPost('dan', 'something new in this post'));
-}, 1000);
-
-export default class App extends Component {
-  render() {
-    return <ConnectedPostList store={store} />
-  }
-};
+export default App;
