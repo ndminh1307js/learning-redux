@@ -1,0 +1,38 @@
+{
+  "name": "learning-redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && serve -p 8080 dist/",
+    "dev": "webpack-dev-server --open --mode development --config webpack.config.dev.js",
+    "build": "webpack --mode production --config webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "html-loader": "^1.2.1",
+    "html-webpack-plugin": "^4.3.0",
+    "redux-devtools": "^3.6.1",
+    "redux-devtools-dock-monitor": "^1.1.4",
+    "redux-devtools-log-monitor": "^2.0.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.5.3",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "serve": "^11.3.2",
+    "shx": "^0.3.2"
+  }
+}
